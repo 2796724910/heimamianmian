@@ -1,0 +1,248 @@
+body {
+    min-width: 320px;
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #f2f4f7;
+}
+a{
+    // 去下划线
+    text-decoration: none;
+    color: #707070;
+}
+// 约束当屏幕大于750px的时候，html字体的大小就不变化了
+@media screen and (min-width:750px) {
+    html{
+        font-size: 37.5px!important;
+    }
+}
+.warp{
+    background-color: #fff;
+    padding-bottom: 1.1467rem;
+}
+// 头部
+.header {
+    height: 2.1333rem;
+    border-bottom: 1px solid #EAEAEA;
+    text-align: center;
+    line-height: 2.1333rem;
+    font-size: .9333rem;
+    color: #1c1c1c;
+}
+// 导航栏模块
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1.2rem;
+    padding-bottom: 1.6rem;
+    .item {
+        
+        display: flex;
+        width: 33.33%;
+        flex-direction: column;
+        //水平居中
+        align-items: center;
+        img {
+            width: 3.7067rem;
+            height: 3.7067rem;
+        }
+        span{
+            color: #707070;
+            font-size: .6667rem;
+        }
+        //选择前面三个
+        &:nth-child(-n+3){
+            margin-bottom: 1.6533rem;
+        }
+    }
+}
+// go模块
+.go{
+    margin: 0 .2667rem 0 .48rem;
+}
+// 就业指导
+.content{
+    padding: 1.0667rem .64rem;
+    background-color: #fff;
+    margin-top: .2667rem;
+    .con-hd{
+    display: flex;
+    height: 1.013333rem;
+    line-height: 1.0133rem;
+    justify-content: space-between;
+    h4{
+        margin: 0;
+        font-size: .7467rem;
+        color: #333333;
+        .icon{
+            display: inline-block;
+            width: 1.0133rem;
+            height: 1.0133rem;
+            // 默认图片和文字是基线对齐的，这行代码修改成居中对齐
+            vertical-align: middle;
+            // 微调
+            margin-bottom: .1333rem;
+        }
+    }
+    .more{
+        font-size: .5867rem;
+        color: #999999;
+    }
+    }
+}
+.get_job_focus{
+    position: relative;
+    margin-top: .9067rem;
+    .swiper-container {
+        height: 100%;
+        width: 14.4rem;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+  
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+            /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    transition: 300ms;
+        //其余的兄弟是0.8
+        transform: scale(0.8);
+        opacity: 0.4;
+        a{
+            width: 9.0133rem;
+            height: 10.0267rem;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        p{
+            width: 9.0133rem;
+            font-size: .6667rem;
+            margin-top: .64rem;
+            color: #333;
+        }
+      }
+  // 当前选中的 slide   中间那个
+  .swiper-slide-active,
+  .swiper-slide-duplicate-active {
+    transform: scale(1);
+    z-index: 999;
+    opacity: 1;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    outline: none;
+    &:after {
+      font-size: 1.066667rem;
+      color: #333;
+    }
+  }
+}
+// 这里名字别乱改，未知问题
+.study_d{
+    padding-bottom: 2.9333rem !important;
+}
+//学习
+.study{
+    .mySwiper{
+        padding: .2667rem;
+    }
+    .swiper-slide {
+        margin-top: .9067rem;
+        font-size: 18px;
+        background: #fff;
+        width: 7.7333rem;
+        height: 9.0667rem;
+        background-color: #fff;
+        border-radius: .2667rem;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+        h5{
+            font-size: .6933rem;
+            margin: .5333rem 0;
+            font-weight: 400;
+            padding: 0 .2667rem;
+        }
+        p{
+            padding: 0 .2667rem;
+            font-size: .6933rem;
+            color: #ff4400;
+        }
+      }
+}
+//底部
+// .footer{
+//     position: fixed;
+//     left: 50%;
+//     bottom: 0;
+//     transform: translateX(-50%);
+//     z-index: 9999;
+//     display: flex;
+//     padding-top: .5333rem;
+//     background-color: #fff;
+//     height: 2.9333rem;
+//     width: 100%;
+//     min-width: 320px;
+//     max-width: 750px;
+//     border-top: 1px solid #ccc;
+//     .item{
+//         flex: 1;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         img{
+//             width: 1.04rem;
+//             height: 1.0933rem;
+//         }
+//         p{
+//             font-size: .5867rem;
+//             margin-top: .2667rem;
+//             color: blue;
+//         }
+//     }
+// }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 2.933333rem;
+    width: 100%;
+  
+    z-index: 99999;
+    display: flex;
+    padding: 0.533333rem;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    .item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 1.04rem;
+        height: 1.093333rem;
+      }
+      p {
+        font-size: 0.586667rem;
+        color: #666666;
+        margin-top: 0.266667rem;
+      }
+    }
+  }
